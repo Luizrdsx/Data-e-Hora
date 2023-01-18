@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<button onclick="showDateTime()">Clique aqui</button>
+
+<script>
+function showDateTime() {
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    var dayOfWeek = date.getDay();
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    var days = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sabado"];
+    document.getElementById("demo").innerHTML = "Data Atual: " + day + "/" + month + "/" + year + "<br>" + "Dia da Semana: " + days[dayOfWeek] + "<br>" + "Hora Atual: " + hour + ":" + min + ":" + sec;
+}
+</script>
+
+</body>
+</html>
